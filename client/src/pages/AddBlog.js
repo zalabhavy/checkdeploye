@@ -48,7 +48,7 @@ const AddBlog = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("https://checkdeploye.onrender.com//api/v1/add/blog",
+      const res = await axios.post("https://checkdeploye.onrender.com/api/v1/add/blog",
         formdata,
         {
           headers: {
