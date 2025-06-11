@@ -10,7 +10,6 @@ connectToMongo();
 app.use(cors());
 app.use(express.json());
 app.use(express.static("public")); 
-app.use('/upload', express.static(path.join(process.cwd(), 'public/upload')));
 
 app.get("/", (req, res) => {
   res.send("API IS RUNNING!");
