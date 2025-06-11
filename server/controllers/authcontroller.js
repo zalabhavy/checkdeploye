@@ -35,25 +35,6 @@ class AuthController {
     }
   };
 
-  static sendOtpWithRetry = async (email, retries = 3, delay = 5000) => {
-    for (let i = 0; i < retries; i++) {
-      try {
-        const response = await axios.post(
-          "https://email-otp-rest-api.onrender.com/api/generate",
-          { email }
-        );
-        return response;
-      } catch (error) {
-        if (error.response?.status === 503 && i < retries - 1) {
-          console.log(`OTP service down, retrying in ${delay / 1000}s... [Attempt ${i + 1}]`);
-          await new Promise(resolve => setTimeout(resolve, delay));
-        } else {
-          throw error;
-        }
-      }
-    }
-  };
-  
   // User Login (Step 1: Login and OTP Sending)
   static userLogin = async (req, res) => {
     const { email, password } = req.body;
@@ -65,12 +46,11 @@ class AuthController {
           const isPasswordMatch = await bcryptjs.compare(password, isEmail.password);
           if (isPasswordMatch) {
             // Generate OTP using Depooye API
-            // const otpGenerationResponse = await axios.post(
-            //   "https://email-otp-rest-api.onrender.com/api/generate",
-            //   { email } 
-            // );
-            const otpGenerationResponse = await AuthController.sendOtpWithRetry(email);
-            
+            const otpGenerationResponse = await axios.post(
+              "https://email-otp-rest-api.onrender.com/api/generate",
+              { email } 
+            );
+
             if (otpGenerationResponse?.data) {
               return res.status(200).json({
                 message: "OTP Sent to your email. Please verify the OTP.",
