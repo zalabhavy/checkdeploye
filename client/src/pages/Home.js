@@ -10,7 +10,7 @@ const Home = () => {
     const fetchAllBlogs = async () => {
       try {
         const res = await axios.get(
-          "https://blog-website-jvr0.onrender.com/api/v1/get/allblogs",
+          "https://checkdeploye.onrender.com/api/v1/get/allblogs",
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -39,7 +39,7 @@ const Home = () => {
                 ? blogs.map((item) => (
                     <div key={item.id} className="card m-3 blog-card">
                       <img
-                        src={`https://blog-website-jvr0.onrender.com/upload/${item.thumbnail}`}
+                        src={`https://checkdeploye.onrender.com/upload/${item.thumbnail}`}
                         className="card-img-top"
                         alt={item.title}
                       />

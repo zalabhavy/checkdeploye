@@ -13,7 +13,7 @@ const SingleBlog = () => {
     const fetchSingleBlog = async () => {
      
       try {
-        const res = await axios.get(`https://blog-website-jvr0.onrender.com/api/v1/get/blog/${id}`, {
+        const res = await axios.get(`https://checkdeploye.onrender.com/api/v1/get/blog/${id}`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },

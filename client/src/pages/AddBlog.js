@@ -16,7 +16,7 @@ const AddBlog = () => {
   useEffect(() => {
     const fetchAllCategories = async () => {
       try {
-        const res = await axios.get("https://blog-website-jvr0.onrender.com/api/v1/get/catagories", {
+        const res = await axios.get("https://checkdeploye.onrender.com/api/v1/get/catagories", {
           headers: {
             "Authorization" : `Bearer ${localStorage.getItem("token")}`,
           },
@@ -48,7 +48,7 @@ const AddBlog = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("https://blog-website-jvr0.onrender.com/api/v1/add/blog",
+      const res = await axios.post("https://checkdeploye.onrender.com//api/v1/add/blog",
         formdata,
         {
           headers: {

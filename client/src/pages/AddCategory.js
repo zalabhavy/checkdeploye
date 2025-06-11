@@ -13,7 +13,7 @@ const AddCategory = () => {
   {
     e.preventDefault();
     try {
-       const res = await axios.post("https://blog-website-jvr0.onrender.com/api/v1/add/catagory",input,
+       const res = await axios.post("https://checkdeploye.onrender.com//api/v1/add/catagory",input,
         {
           headers:{
             Authorization: `Bearer ${localStorage.getItem("token")}`,
