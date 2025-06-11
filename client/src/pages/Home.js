@@ -37,7 +37,7 @@ const Home = () => {
             <div className="d-flex flex-wrap justify-content-center">
               {blogs && blogs.length >0
                 ? blogs.map((item) => (
-                    <div key={item.id} className="card m-3 blog-card">
+                    <div key={item._id} className="card m-3 blog-card">
                       <img
                         src={`https://checkdeploye.onrender.com/upload/${item.thumbnail}`}
                         className="card-img-top"
