@@ -1,0 +1,137 @@
+/* Navbar CSS Header.js */
+.navbar-brand:hover {
+    color: #ffc107 !important;
+    cursor: pointer;
+  }
+  
+  .nav-link:hover {
+    text-decoration: underline;
+    color: #ffc107 !important;
+    cursor: pointer;
+  }
+/* Footer CSS Footer.js */
+  .footer-link:hover {
+    color: #ffc107 !important;
+    text-decoration: underline !important;
+    cursor: pointer;
+  }
+  
+  .footer-brand:hover {
+    color: #ffc107 !important;
+    cursor: pointer;
+  }
+  
+  .footer-link,
+  .footer-brand {
+    transition: color 0.3s ease;
+    cursor: pointer;
+  }
+  /* blog card home.js */
+  .blog-card {
+    width: 18rem;
+    min-height: 340px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .blog-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .blog-card .card-img-top {
+    height: 180px;
+    object-fit: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  
+  .blog-card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+  
+  .blog-card .card-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+  }
+    
+  .blog-card .card-text {
+    font-size: 1rem;
+    flex-grow: 1;
+    color: black;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  .badge-container {  
+    flex-wrap: wrap;
+  }
+  .category-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #4f46e5; /* default text color */
+    background-color: #eef2ff; /* default bg */
+    padding: 0.35em 0.9em;
+    border-radius: 5px;
+    line-height: 1;
+    margin-bottom: 0.75rem;
+    width: fit-content;
+    text-transform: capitalize;
+  }
+  .author-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #1d4ed8; /* Slightly darker blue for better visibility */
+    background-color: #e0e7ff; /* Soft blue background */
+    padding: 0.35em 0.9em;
+    border-radius: 5px;
+    line-height: 1;
+    margin-bottom: 0.75rem;
+    width: fit-content;
+    text-transform: capitalize;
+  }
+  
+  /* Sports Category */
+  .category-badge.sports {
+    background-color: #e0f7fa;
+    color: #00695c;
+  }
+  
+  /* Tech Category */
+  .category-badge.tech {
+    background-color: #ede7f6;
+    color: #5e35b1;
+  }
+  
+  /* Politics Category */
+  .category-badge.politics {
+    background-color: #fce4ec;
+    color: #c2185b;
+  }
+  
+  /* Entertainment Category */
+  .category-badge.entertainment {
+    background-color: #fff8e1;
+    color: #f57c00;
+  }
+  
+  /* Health Category */
+  .category-badge.health {
+    background-color: #e3f2fd;
+    color: #1976d2;
+  }
+  
+  
+  .blog-card .btn {
+    align-self: auto;
+  }
